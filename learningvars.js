@@ -8,6 +8,6 @@ const token = {
 };
 
 
-console.log(token['name']);
+console.log(token.name);
 
 
