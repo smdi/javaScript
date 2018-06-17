@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to change the color of this paragraph.</p>
+
+<button onclick="same3.speak()">Try it</button>
+
+<script>
+
+  const same3 = {
+   
+  name : "Imran" , age : 18
+  
+  };
+
+  same3.speak = function (){
+  
+     return document.getElementById('demo').innerHTML= "meoowwwww".toUpperCase();  
+  };
+  
+ // delete.same3.speak();
+
+const arr = [1,2,null,"hello world",0.0002];
+
+const prop =  [
+
+   { name : 'Ruby' ,Hardness : 6.8 },
+   {  name :'sapphire'  ,Hardness : 9.0 },
+   {  name : 'chrome' , Hardness : 2.8}
+
+]; 
+  
+const d = Date();
+
+
+document.getElementById('demo').innerHTML= `${arr[0].toString()}` ;  
+
+</script>
+
+</body>
+</html>
