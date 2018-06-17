@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Laerning functions in java Script 
+	</title>
+</head>
+<body>
+   
+     <script type="text/javascript">
+     	
+
+       function self()
+       {
+          console.log('hello im function');
+          console.log('hello im function');
+          console.log('hello im function');
+         console.log('hello im function');
+       }
+
+
+
+        var t = self;
+        t();
+
+    // function arguments
+   
+     function calci(a ,b)
+       {
+            return (a+b)/2;
+             
+       }
+
+       console.log('the values '+calci(2,4));
+
+     
+      console.log('this is modification of objects');
+
+
+      function f(o)
+      {
+         o.message = "helllo inside the f(o)"; 
+         
+         o = {
+
+         	message : "hello im new objects"
+         } ;
+
+
+               console.log(`inside the function ${o.message}`);
+
+      }
+
+         o = {
+         	message : "hello im imran"
+         } ;
+     
+      console.log(`before ${o.message}`);
+
+      f(o);
+
+      console.log(`after ${o.message}`);
+
+
+      console.log('no matter if no method overloading');
+
+    
+      function k(x){
+
+
+         console.log(`the values of x is ${x} represents no overloading`);
+
+      }
+   
+     k();
+
+
+     console.log('destructuring assignment');
+
+     const kv = {
+
+               a :1 ,
+               b:2,
+               c :3
+
+     }  ;
+  
+
+    const  {a,b,c,d} = kv;
+ 
+    console.log(`the value of a ${a}`);
+    console.log(`the value of b ${b}`);
+    console.log(`the value of c ${c}`);
+    console.log(`the value of d ${d}`);
+
+
+
+    console.log('destructuring arguments inside the functions');
+    
+   
+     // function getSentence({subject , verb , object})
+     // {
+     //  return `${subject} ${verb} ${object}`
+     // }
+
+
+     function getSentence([subject , verb , object])
+     {
+      return `${subject} ${verb} ${object}`
+     }
+
+     // const gs = {
+
+
+     //    subject : 'I'
+     //    ,
+
+     //   verb : 'love'
+     //   ,
+
+     //   object : 'javascript'
+
+     // };
+
+     const gs = [
+
+        'I'
+        ,
+
+        'love'
+       ,
+
+       'javascript'
+
+     ] ;
+
+
+
+       getSentence(gs);
+         
+
+       console.log(getSentence(gs));
+
+
+
+     function getSentenceSpreadoperator(prefix , ...last)
+     {
+        const prefixedWords = [];
+
+        for(let i =0 ; i<last.length ; i++) 
+        {
+               
+                prefixedWords[i] = prefix + last[i];
+
+        }       
+
+        return prefixedWords;
+
+     }
+
+   
+      ob = getSentenceSpreadoperator('con','verse','stancy');
+
+     console.log(ob[0] + "\t" + ob[1]);
+
+
+     </script>
+  <button  onclick="self()">click me</button>
+</body>
+</html>
+
+
+
+
+
