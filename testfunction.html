@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html>
+  <script>
+  
+function sayHello()
+{
+
+   console.log("hello im imran !");
+   
+}
+function funTwo()
+{
+    return "Welcome......!";
+
+}
+function funOne(arg1)
+{
+
+    return arg1(); 
+  
+}
+
+console.log(funOne(funTwo));
+
+  </script>
+</html>
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+<script>
+
+
+var x = [] ;
+
+ for(let i = 0 ; i < 5 ; i++)
+ {
+
+   x[i] = fun_one();
+
+ }
+
+function fun_one() { return "Welcom....!"; }
+
+for(let j = 0 ; j<x.length ; j++)
+{
+     console.log(x[j] + "<br>" + j );
+}
+
+var x = function f(stop)
+{
+
+  if (stop) console.log('stopped');
+  f(true);
+
+}
+
+x(true);
+
+</script>
+</html>
+
+
+
+
+
+
+
