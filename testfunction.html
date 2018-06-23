@@ -27,7 +27,7 @@ console.log(funOne(funTwo));
 
  -->
 
-
+<!-- 
 
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@ var x = function f(stop)
 {
 
   if (stop) console.log('stopped');
-  f(true);
+//   f(true);  createes an recursion
 
 }
 
@@ -62,6 +62,98 @@ x(true);
 
 </script>
 </html>
+
+
+ -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <script>
+    
+    var x = () => "Welcomeee.....!";
+
+    var y = name => `helllo ${name}`
+
+    var z  = (a,b) => a+b;
+
+   console.log(z(1,2));
+   console.log(y('Imran'));
+   console.log(x());
+    </script>
+</html>
+ -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <script>
+    const bruce = {name : "bruce"};
+    const shaik = {name : "shaik"};
+
+    function greet(){
+  
+       return `hello im ${this.name}`;
+    }
+
+     console.log(greet());
+     console.log(greet.call(bruce));
+     console.log(greet.call(shaik));
+
+  </script>
+</html>  -->
+
+<!-- //call apply and bind demooo -->
+
+
+<!DOCTYPE html >
+<html>
+    <script>
+     
+     const bruce = {name : "bruce"};
+     const shaik = {name : "shaik"};
+     const hamiza = {name : "hamiza"};
+
+
+     function update(birthyear , occupation)
+     {
+       this.birthyear = birthyear;
+       this.occupation = occupation;
+
+      return `hello im ${this.name} my dob is ${this.birthyear} occupation is ${this.occupation}`;
+
+     }
+    // update.call(bruce ,1949 , "Analyst");
+    // update.call(shaik ,1942 , "writer");
+    // update.call(hamiza ,1945 , "Google CEO");
+
+   console.log( update.apply(bruce ,[1949 , "Analyst"]));
+    console.log(update.apply(shaik ,[1942 , "writer"]));
+    console.log(update.apply(hamiza ,[1945 , "Google CEO"]));
+
+    
+const arr = [1,2,5,6,-1,45];
+
+console.log(Math.min.apply(null , arr));
+console.log(Math.max.apply(null , arr));
+
+
+console.log(Math.min(...arr));
+console.log(Math.max(...arr));
+
+
+
+var updatebruce = update.bind(bruce);
+console.log(updatebruce(1947 , "Analyst"));
+console.log(updatebruce.call(hamiza ,1947 ,"Google Ceo"));
+console.log(update.call(hamiza ,1945 , "Google CEO"));
+
+    </script>
+</html>
+
+
 
 
 
